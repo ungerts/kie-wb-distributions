@@ -1,0 +1,9 @@
+language: java
+jdk:
+  - oraclejdk8
+before_install:
+	- sudo apt-get update -qq
+	- sudo apt-get install -qq git
+install:
+  -
+script: mvn clean package -DskipTests -Dmaven.javadoc.skip=true
